@@ -1,0 +1,2 @@
+module AdminOfDepartmentsHelper
+end
