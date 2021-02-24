@@ -1,8 +1,8 @@
 class Employee < ApplicationRecord
 	validates :name, presence: true, length: {minimum: 3}
-	validates :gender, presence: true
-	validates :dob, presence: true
-	validates :address, presence: true
-	validates :department, presence: true
-	validates :doj, presence: true
+	validates :gender, presence: true, length:{minimum:1}
+	validates :dob, presence: true, length:{minimum:1}
+	validates :address, presence: true, length:{minimum:2}
+	validates :department, presence: true, length:{minimum:2}
+	validates :doj, presence: true, length:{minimum:2}
 end

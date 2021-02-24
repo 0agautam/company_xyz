@@ -15,7 +15,7 @@
           <%= form.text_field :name, required: :true%>
           <% @employee.errors.full_messages_for(:name).each do |message| %>
            <div><%= message %></div>
-         <% end %>	
+          <% end %>	
         </div>
         <br/>
         <div>
@@ -24,26 +24,41 @@
           <%= form.label :gender_male, "Male"%>	
           <%= form.radio_button :gender, 'female' %>
           <%= form.label :gender_female, "Female" %>
+          <% @employee.errors.full_messages_for(:gender).each do |message| %>
+           <div><%= message %></div>
+          <% end %> 
         </div>
         <br/>
         <div>
           <%= form.label :dob,"Date of Birth"%>	
           <%= form.date_select :dob,{order:[:day,:month,:year],prompt:{day:"Select day",month:"Select month",year:"Select year"}, start_year: Date.today.year - 100, end_year:Date.today.year-15},{required: :true} %>	
+          <% @employee.errors.full_messages_for(:dob).each do |message| %>
+           <div><%= message %></div>
+          <% end %>  
         </div>
         <br/>
         <div>
           <%= form.label :address,"Address"%>	
           <%= form.text_area :address,size: '50*12', required: :true%>	
+          <% @employee.errors.full_messages_for(:address).each do |message| %>
+           <div><%= message %></div>
+          <% end %>  
         </div>
         <br/>
         <div>
           <%= form.label :doj,"Date of Joining"%>	
           <%= form.date_select :doj,{order:[:day,:month,:year],prompt:{day:"Select day",month:"Select month",year:"Select year"}, start_year: Date.today.year - 20, end_year:Date.today.year},{required: :true} %>	
+          <% @employee.errors.full_messages_for(:doj).each do |message| %>
+           <div><%= message %></div>
+          <% end %> 
         </div>
         <br/>
         <div>
           <%= form.label :department,"Department"%>	
-          <%= form.text_field :department, required: :true%>	
+          <%= form.text_field :department, required: :true%>
+          <% @employee.errors.full_messages_for(:department).each do |message| %>
+           <div><%= message %></div>
+          <% end %> 	
         </div>
 
         <div>
