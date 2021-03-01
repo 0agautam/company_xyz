@@ -5,5 +5,6 @@ class Employee < ApplicationRecord
 	validates :address, presence: true, length:{minimum:2}
 	validates :department, presence: true, length:{minimum:2}
 	validates :doj, presence: true, length:{minimum:2}
+	validates :emp_id, presence: true, length: {minimum:5}
 	#has_many : equipment, dependent: :destroy
 end

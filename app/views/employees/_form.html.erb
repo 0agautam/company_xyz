@@ -27,6 +27,14 @@
         </div>
         <br/>
         <div>
+          <%= form.label :emp_id,"Enter Employee Id"%> 
+          <%= form.text_field :emp_id, required: :true%>
+          <% @employee.errors.full_messages_for(:emp_id).each do |message| %>
+           <div><%= message %></div>
+          <% end %> 
+        </div>
+        <br/>
+        <div>
           <%= form.label :dob,"Date of Birth"%>	
           <%= form.date_select :dob,{order:[:day,:month,:year],prompt:{day:"Select day",month:"Select month",year:"Select year"}, start_year: Date.today.year - 100, end_year:Date.today.year-15},{required: :true} %>	
         </div>
@@ -47,7 +55,7 @@
         </div>
 
         <div>
-          <%= form.submit "Submit" %>
+          <%= form.submit "Update" %>
         </div>
 	  
 	    <% end %>
