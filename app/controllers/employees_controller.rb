@@ -13,7 +13,6 @@ class EmployeesController < ApplicationController
   	puts "Into New"
   	@employee = Employee.new
   	puts "Out of new"
-    @emp = Employee.new(dob: Date.new(1995, 12, 21))
   	#render 'employee/new_employee'
   end
 

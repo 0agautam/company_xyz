@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'employees', to:'employees#index'
   resources :employees
+  
 
   #get "/admindep", to:"admin_of_departments#index"
 

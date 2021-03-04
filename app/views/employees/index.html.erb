@@ -1,11 +1,46 @@
 <h1>Employees</h1>
 
-<ul>
-  <% @employees.each do |employee| %>
-    <li>
-    	<%= link_to employee.name, employee %>
-    </li>
-  <% end %>
-</ul>
+<%= form_with do |form| %>
+<div>
+<%= form.label :list_employees, "List" %>
+<%= form.select :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+</div>
+
+<table align="justify">
+  <thead>
+    <tr>
+      <th>S.No.</th>
+      <th>Name </th>
+      <th>Edit</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% count = 0 %>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td>
+          <%= form.check_box :delete_employee %>
+        </td>
+        <td>
+          <%= count +=1 %>
+        </td>
+        <td>
+          <%= link_to employee.name.capitalize,employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Edit",edit_employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Show",employee_path(employee) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+
 
 <%= link_to "Add New Employee", new_employee_path %>
+
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_132723) do
+ActiveRecord::Schema.define(version: 2021_03_02_030021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(version: 2021_03_01_132723) do
     t.bigint "department_id", null: false
   end
 
+  create_table "documents", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "employees", force: :cascade do |t|
     t.text "name"
     t.string "gender"
@@ -67,6 +73,32 @@ ActiveRecord::Schema.define(version: 2021_03_01_132723) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "maccount_histories", force: :cascade do |t|
+    t.integer "maccount_id"
+    t.integer "credit_rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "maccounts", force: :cascade do |t|
+    t.integer "msupplier_id"
+    t.string "maccount_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "msuppliers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "paragraphs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -80,6 +112,14 @@ ActiveRecord::Schema.define(version: 2021_03_01_132723) do
   end
 
   create_table "projects", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.integer "document_id"
+    t.integer "paragraph_id"
+    t.datetime "creation_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
