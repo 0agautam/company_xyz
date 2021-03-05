@@ -1,16 +1,23 @@
 <h1>Employees</h1>
 
-<%= form_with do |form| %>
-<div>
+<%= form_tag employees_path, method: :get do %>
+<%= text_field_tag :search%>
+<%= submit_tag "Find", name: nil %>
+<% end %>
+
+<br/><br/>
+
+<%= form_with url:delete_selected_employees_path do |form| %>
 <%= form.label :list_employees, "List" %>
 <%= form.select :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
-</div>
-
+<%= form.submit value: "Delete Selected" %>
+<br><br>
 <table align="justify">
   <thead>
     <tr>
+      <th>Select</th>
       <th>S.No.</th>
-      <th>Name </th>
+      <th><%= form.label :name,"Names"%></th>
       <th>Edit</th>
       <th>Show</th>
     </tr>
@@ -20,7 +27,7 @@
     <% @employees.each do |employee| %>
       <tr>
         <td>
-          <%= form.check_box :delete_employee %>
+          <%= check_box_tag "employee_ids[]",employee.id %>
         </td>
         <td>
           <%= count +=1 %>
@@ -39,8 +46,8 @@
   </tbody>
   
 </table>
-
-
-<%= link_to "Add New Employee", new_employee_path %>
-
+<br/>
+<h3>
+  <%= link_to "Add New Employee", new_employee_path %>
+</h3>
 <% end %>
