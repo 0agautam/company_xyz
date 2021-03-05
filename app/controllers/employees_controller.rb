@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   
   def index
-  	@employees = Employee.search(params[:search])
+  	@employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("name #{params[:order]}")
 
   end
 

@@ -17,20 +17,24 @@
     <tr>
       <th>Select</th>
       <th>S.No.</th>
-      <th><%= form.label :name,"Names"%></th>
+      <% if params[:order] == "DESC" %>
+        <% params[:order] = "ASC" %>
+      <% else %>
+        <% params[:order] = "DESC" %>
+      <% end %>
+      <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
       <th>Edit</th>
       <th>Show</th>
     </tr>
   </thead>
   <tbody>
-    <% count = 0 %>
-    <% @employees.each do |employee| %>
+    <% @employees.each_with_index do |employee, index| %>  
       <tr>
         <td>
           <%= check_box_tag "employee_ids[]",employee.id %>
         </td>
         <td>
-          <%= count +=1 %>
+          <%= index+=1 %>
         </td>
         <td>
           <%= link_to employee.name.capitalize,employee_path(employee) %>
@@ -51,3 +55,4 @@
   <%= link_to "Add New Employee", new_employee_path %>
 </h3>
 <% end %>
+<%= will_paginate @employees %>
