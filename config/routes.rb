@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   get 'employees', to:'employees#index'
   resources :employees
-  
 
+  resources :employees do
+    collection do
+      post 'delete_selected'
+    end
+  end
   #get "/admindep", to:"admin_of_departments#index"
 
   # scope '/admin' do
