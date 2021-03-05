@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   
   def index
-  	@employees = Employee.all
+  	@employees = Employee.search(params[:search])
 
   end
 
@@ -50,6 +50,15 @@ class EmployeesController < ApplicationController
     redirect_to root_path
   end
 
+  def delete_selected
+
+    puts params
+    
+    Employee.where(:id => params[:employee_ids]).destroy_all
+
+    redirect_to root_path
+  end
+
   private
     def employee_params
   	  params.require(:employee).permit(:name, :gender, :dob, :address, :department, :doj,:emp_id)
@@ -57,3 +66,4 @@ class EmployeesController < ApplicationController
 
 
 end
+  
