@@ -1,7 +1,10 @@
 class EmployeesController < ApplicationController
   
   def index
-  	@employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("name #{params[:order]}")
+    
+    order = params[:order]
+    order = "ASC" unless order
+  	@employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("name #{order}")
 
   end
 

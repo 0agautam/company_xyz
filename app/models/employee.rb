@@ -10,18 +10,15 @@ class Employee < ApplicationRecord
 	has_many :laptops, dependent: :destroy
 	has_many :accounts
 
+
   def self.search(search)
     if search 
-      found_employees = Employee.where("name ilike ?", "%#{search}%")
-
-      if found_employees
-        self.where(id: found_employees)
- 
-      else
-        @employees = Employee.all
-      end
+      Employee.where("name ilike ?", "%#{search}%")
     else
-      @employees = Employee.all
+      Employee.all
     end
   end
+
+
+
 end
