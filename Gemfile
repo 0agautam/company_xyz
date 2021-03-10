@@ -57,3 +57,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'awesome_print'
 gem 'will_paginate', '~> 3.3.0'
+
+#image uploader
+gem 'carrierwave', '~> 2.0'
+#image attribute modifier
+gem 'rmagick', '~> 2.13.1'
+#drag and drop
+gem 'active_storage_drag_and_drop'
+
+#roo gem for importing excel file and many of formats
+gem 'roo'
+#for excel files
+gem 'roo-xls'
+gem 'rspreadsheet'
+gem "iconv"

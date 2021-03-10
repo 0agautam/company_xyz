@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :employees do
     collection do
       post 'delete_selected'
+      post 'import'
     end
   end
   #get "/admindep", to:"admin_of_departments#index"

@@ -4,7 +4,19 @@ class EmployeesController < ApplicationController
     
     order = params[:order]
     order = "ASC" unless order
-  	@employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("name #{order}")
+      
+    if params[:order]
+  	  @employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("name #{order}")
+  
+    elsif params[:order] and params[:page]
+      @employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("updated_at DESC")
+    
+    else
+      @employees = Employee.all.paginate(page: params[:page],per_page:5).order("updated_at DESC")
+      
+    end
+
+    
 
   end
 
@@ -62,9 +74,15 @@ class EmployeesController < ApplicationController
     redirect_to root_path
   end
 
+  def import
+    Employee.import(params[:file])
+    redirect_to root_path, notice:"Employees Imported"
+  end
+
+
   private
     def employee_params
-  	  params.require(:employee).permit(:name, :gender, :dob, :address, :department, :doj,:emp_id)
+  	  params.require(:employee).permit(:name, :gender, :dob, :address, :department, :doj,:emp_id,:image)
   	end
 
 

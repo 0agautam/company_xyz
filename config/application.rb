@@ -1,6 +1,10 @@
 require_relative "boot"
 
 require "rails/all"
+require 'csv'
+require 'roo-xls'
+require 'rspeadsheet'
+require 'iconv'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

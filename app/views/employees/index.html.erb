@@ -2,15 +2,21 @@
 
 <%= form_tag employees_path, method: :get do %>
 <%= text_field_tag :search%>
+
 <%= submit_tag "Find", name: nil %>
 <% end %>
 
-<br/><br/>
-
+<br/>
+<%= form_tag import_employees_path,multipart: true do %>
+  <%= label_tag :file, "Import csv here" %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br><br>
 
 <%= form_with url:delete_selected_employees_path do |form| %>
-<%= form.label :list_employees, "List" %>
-<%= form.select :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+<%= label_tag :list_employees, "List" %>
+<%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
 <%= form.submit value: "Delete Selected" %>
 <br><br>
 <table align="justify">
@@ -56,4 +62,5 @@
   <%= link_to "Add New Employee", new_employee_path %>
 </h3>
 <% end %>
+
 <%= will_paginate @employees %>

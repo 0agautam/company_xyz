@@ -19,6 +19,11 @@
         </div>
         <br/>
         <div>
+          <%= form.label :image, "Upload Image" %>
+          <%= form.file_field :image %>
+        </div>
+        <br/>
+        <div>
           <%= form.label :gender, "Gender" %>
           <%= form.radio_button :gender, 'male'%>	
           <%= form.label :gender_male, "Male"%>	
