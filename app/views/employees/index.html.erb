@@ -1,8 +1,10 @@
-<h1>Employees</h1>
-
+<h1><%= link_to "Employees", employees_path%></h1>
+Download:
+<%= link_to "CSV", employees_path(format: "csv") %> |
+<%= link_to "Excel", employees_path(format: "xls") %>
+<br/><br/>
 <%= form_tag employees_path, method: :get do %>
 <%= text_field_tag :search%>
-
 <%= submit_tag "Find", name: nil %>
 <% end %>
 

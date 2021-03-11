@@ -69,5 +69,4 @@ gem 'active_storage_drag_and_drop'
 gem 'roo'
 #for excel files
 gem 'roo-xls'
-gem 'rspreadsheet'
 gem "iconv"

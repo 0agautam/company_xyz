@@ -47,12 +47,22 @@ class Employee < ApplicationRecord
   end
 
   def self.open_spreadsheet(file)
+    puts "File name is: #{file}"
     case File.extname(file.original_filename)
     when ".csv" then Roo::Csv.new(file.path, nil, :ignore)
     when ".xlsx" then Roo::Excelx.new(file.path, nil, :ignore)
     when ".xls" then  Roo::Excel.new(file.path, nil, :ignore) 
     when ".ods" then  Roo::OpenOffice.new(file.path) 
     else raise "Unknown file type: #{file.original_filename}"
+    end
+  end
+
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |employee|
+        csv << employee.attributes.values_at(*column_names)
+      end
     end
   end
 

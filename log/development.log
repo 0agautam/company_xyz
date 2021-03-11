@@ -37790,3 +37790,2535 @@ puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
 puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
 puma (5.2.1) lib/puma/server.rb:431:in `process_client'
 puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/employees" for ::1 at 2021-03-10 19:16:54 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3620)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 7554)
+Completed 200 OK in 49ms (Views: 38.2ms | ActiveRecord: 7.0ms | Allocations: 8137)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:25:37 +0530
+  
+SyntaxError (/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/controllers/employees_controller.rb:91: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/employees_controller.rb:91: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/employees_controller.rb:91: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/employees_controller.rb:91: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/employees" for ::1 at 2021-03-10 19:25:54 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 8521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 12419)
+Completed 200 OK in 50ms (Views: 20.8ms | ActiveRecord: 11.9ms | Allocations: 18338)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:26:00 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (4.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 4.8ms | Allocations: 1762)
+
+
+  
+ArgumentError (wrong number of arguments (given 11, expected 0)):
+  
+app/models/employee.rb:63:in `values'
+app/models/employee.rb:63:in `block (2 levels) in to_csv'
+app/models/employee.rb:62:in `block in to_csv'
+app/models/employee.rb:60:in `to_csv'
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:26:49 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 10.1ms | Allocations: 9728)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees" for ::1 at 2021-03-10 19:28:48 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 9356)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 13253)
+Completed 200 OK in 45ms (Views: 28.5ms | ActiveRecord: 10.0ms | Allocations: 16063)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:28:53 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Redirected to http://localhost:3000/employees?text=id%2Cname%2Cgender%2Cdob%2Caddress%2Ccreated_at%2Cupdated_at%2Cdepartment%2Cdoj%2Cemp_id%2Cimage%0A50%2Ckkkkkk%2Cmale%2C1922-02-02%2Cfbd%2C2021-03-10+13%3A28%3A32+UTC%2C2021-03-10+13%3A28%3A32+UTC%2Ctechical%2C2020-02-21%2CBS228%2C%0A49%2Cjjjjjjj%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A43%3A09+UTC%2C2021-03-10+12%3A43%3A09+UTC%2Ctechical%2C2020-02-21%2CBS227%2C%0A48%2CAiiiiii%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A21%3A50+UTC%2C2021-03-10+12%3A21%3A50+UTC%2Ctechical%2C2020-02-21%2CBS226%2C%0A47%2CAkdimdddk%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A20%3A54+UTC%2C2021-03-10+12%3A20%3A54+UTC%2Ctechical%2C2020-02-21%2CBS225%2C%0A46%2Caksiemd%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A20%3A54+UTC%2C2021-03-10+12%3A20%3A54+UTC%2Ctechical%2C2020-02-21%2CBS224%2C%0A
+Completed 302 Found in 15ms (ActiveRecord: 3.6ms | Allocations: 1689)
+
+
+Started GET "/employees?text=id%2Cname%2Cgender%2Cdob%2Caddress%2Ccreated_at%2Cupdated_at%2Cdepartment%2Cdoj%2Cemp_id%2Cimage%0A50%2Ckkkkkk%2Cmale%2C1922-02-02%2Cfbd%2C2021-03-10+13%3A28%3A32+UTC%2C2021-03-10+13%3A28%3A32+UTC%2Ctechical%2C2020-02-21%2CBS228%2C%0A49%2Cjjjjjjj%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A43%3A09+UTC%2C2021-03-10+12%3A43%3A09+UTC%2Ctechical%2C2020-02-21%2CBS227%2C%0A48%2CAiiiiii%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A21%3A50+UTC%2C2021-03-10+12%3A21%3A50+UTC%2Ctechical%2C2020-02-21%2CBS226%2C%0A47%2CAkdimdddk%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A20%3A54+UTC%2C2021-03-10+12%3A20%3A54+UTC%2Ctechical%2C2020-02-21%2CBS225%2C%0A46%2Caksiemd%2Cmale%2C1922-02-02%2C%2C2021-03-10+12%3A20%3A54+UTC%2C2021-03-10+12%3A20%3A54+UTC%2Ctechical%2C2020-02-21%2CBS224%2C%0A" for ::1 at 2021-03-10 19:28:53 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"text"=>"id,name,gender,dob,address,created_at,updated_at,department,doj,emp_id,image\n50,kkkkkk,male,1922-02-02,fbd,2021-03-10 13:28:32 UTC,2021-03-10 13:28:32 UTC,techical,2020-02-21,BS228,\n49,jjjjjjj,male,1922-02-02,,2021-03-10 12:43:09 UTC,2021-03-10 12:43:09 UTC,techical,2020-02-21,BS227,\n48,Aiiiiii,male,1922-02-02,,2021-03-10 12:21:50 UTC,2021-03-10 12:21:50 UTC,techical,2020-02-21,BS226,\n47,Akdimdddk,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS225,\n46,aksiemd,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS224,\n"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 35.3ms | Allocations: 3690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 7624)
+Completed 200 OK in 57ms (Views: 46.2ms | ActiveRecord: 6.4ms | Allocations: 8238)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:29:17 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 9336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 13205)
+Completed 200 OK in 37ms (Views: 21.4ms | ActiveRecord: 9.3ms | Allocations: 16017)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:29:21 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Redirected to http://localhost:3000id,name,gender,dob,address,created_at,updated_at,department,doj,emp_id,image50,kkkkkk,male,1922-02-02,fbd,2021-03-10 13:28:32 UTC,2021-03-10 13:28:32 UTC,techical,2020-02-21,BS228,49,jjjjjjj,male,1922-02-02,,2021-03-10 12:43:09 UTC,2021-03-10 12:43:09 UTC,techical,2020-02-21,BS227,48,Aiiiiii,male,1922-02-02,,2021-03-10 12:21:50 UTC,2021-03-10 12:21:50 UTC,techical,2020-02-21,BS226,47,Akdimdddk,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS225,46,aksiemd,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS224,
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms | Allocations: 1612)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:29:28 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Redirected to http://localhost:3000id,name,gender,dob,address,created_at,updated_at,department,doj,emp_id,image50,kkkkkk,male,1922-02-02,fbd,2021-03-10 13:28:32 UTC,2021-03-10 13:28:32 UTC,techical,2020-02-21,BS228,49,jjjjjjj,male,1922-02-02,,2021-03-10 12:43:09 UTC,2021-03-10 12:43:09 UTC,techical,2020-02-21,BS227,48,Aiiiiii,male,1922-02-02,,2021-03-10 12:21:50 UTC,2021-03-10 12:21:50 UTC,techical,2020-02-21,BS226,47,Akdimdddk,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS225,46,aksiemd,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS224,
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms | Allocations: 1584)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:29:31 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 3619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 7525)
+Completed 200 OK in 45ms (Views: 33.3ms | ActiveRecord: 7.2ms | Allocations: 8139)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:29:41 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 9336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 13233)
+Completed 200 OK in 41ms (Views: 25.9ms | ActiveRecord: 9.4ms | Allocations: 16042)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:29:46 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.5ms | Allocations: 2163)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees" for ::1 at 2021-03-10 19:34:24 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 9355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 13252)
+Completed 200 OK in 41ms (Views: 25.9ms | ActiveRecord: 9.3ms | Allocations: 16061)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:34:28 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.0ms | Allocations: 1944)
+
+
+  
+TypeError ({:text=>"id,name,gender,dob,address,created_at,updated_at,department,doj,emp_id,image\n50,kkkkkk,male,1922-02-02,fbd,2021-03-10 13:28:32 UTC,2021-03-10 13:28:32 UTC,techical,2020-02-21,BS228,\n49,jjjjjjj,male,1922-02-02,,2021-03-10 12:43:09 UTC,2021-03-10 12:43:09 UTC,techical,2020-02-21,BS227,\n48,Aiiiiii,male,1922-02-02,,2021-03-10 12:21:50 UTC,2021-03-10 12:21:50 UTC,techical,2020-02-21,BS226,\n47,Akdimdddk,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS225,\n46,aksiemd,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS224,\n"} is not a symbol nor a string):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees" for ::1 at 2021-03-10 19:34:44 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 37.5ms | Allocations: 9374)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 13271)
+Completed 200 OK in 53ms (Views: 37.9ms | ActiveRecord: 9.2ms | Allocations: 16079)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:34:49 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 2.0ms | Allocations: 12721)
+
+
+  
+NoMethodError (undefined method `id,name,gender,dob,address,created_at,updated_at,department,doj,emp_id,image
+50,kkkkkk,male,1922-02-02,fbd,2021-03-10 13:28:32 UTC,2021-03-10 13:28:32 UTC,techical,2020-02-21,BS228,
+49,jjjjjjj,male,1922-02-02,,2021-03-10 12:43:09 UTC,2021-03-10 12:43:09 UTC,techical,2020-02-21,BS227,
+48,Aiiiiii,male,1922-02-02,,2021-03-10 12:21:50 UTC,2021-03-10 12:21:50 UTC,techical,2020-02-21,BS226,
+47,Akdimdddk,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS225,
+46,aksiemd,male,1922-02-02,,2021-03-10 12:20:54 UTC,2021-03-10 12:20:54 UTC,techical,2020-02-21,BS224,
+' for #<EmployeesController:0x00000000038950>):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees" for ::1 at 2021-03-10 19:35:03 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 9355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 13252)
+Completed 200 OK in 51ms (Views: 32.9ms | ActiveRecord: 10.2ms | Allocations: 16060)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:35:06 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Sent data  (13.8ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 2.9ms | Allocations: 1898)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:35:25 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data  (1.1ms)
+Completed 200 OK in 25ms (Views: 1.0ms | ActiveRecord: 8.0ms | Allocations: 9028)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:35:30 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 4169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 8104)
+Completed 200 OK in 52ms (Views: 40.0ms | ActiveRecord: 7.0ms | Allocations: 8718)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:35:35 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Sent data  (1.7ms)
+Completed 200 OK in 14ms (Views: 1.4ms | ActiveRecord: 3.3ms | Allocations: 1733)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:35:45 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 8.2ms | Allocations: 11543)
+
+
+  
+NoMethodError (undefined method `send_to' for #<EmployeesController:0x0000000003de50>
+Did you mean?  send_action):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:36:24 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data  (1.1ms)
+Completed 200 OK in 27ms (Views: 0.9ms | ActiveRecord: 8.3ms | Allocations: 9042)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:36:26 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 4170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 8105)
+Completed 200 OK in 54ms (Views: 42.4ms | ActiveRecord: 7.1ms | Allocations: 8719)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:36:31 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Sent data  (1.8ms)
+Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 3.0ms | Allocations: 1731)
+
+
+Started GET "/" for ::1 at 2021-03-10 19:41:43 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 12169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 19239)
+Completed 200 OK in 58ms (Views: 32.7ms | ActiveRecord: 9.6ms | Allocations: 24877)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:41:53 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 25)
+Sent data  (2.3ms)
+Completed 200 OK in 17ms (Views: 1.9ms | ActiveRecord: 3.6ms | Allocations: 1888)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:42:13 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 8.4ms | Allocations: 10230)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:42:53 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 7.3ms | Allocations: 12977)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/" for ::1 at 2021-03-10 19:42:55 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (5.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 6284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 13394)
+Completed 200 OK in 58ms (Views: 43.3ms | ActiveRecord: 7.4ms | Allocations: 14977)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:43:02 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.5ms | Allocations: 2694)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:44:51 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms | Allocations: 2134)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:44:53 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.6ms | Allocations: 2158)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:44:53 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 15.4ms | Allocations: 37280)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:44:54 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 21.5ms | Allocations: 14179)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:44:54 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms | Allocations: 7496)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:45:02 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.2ms | Allocations: 2134)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/" for ::1 at 2021-03-10 19:47:31 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 12169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 19239)
+Completed 200 OK in 55ms (Views: 32.1ms | ActiveRecord: 9.3ms | Allocations: 24876)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:47:46 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.3ms | Allocations: 3053)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/" for ::1 at 2021-03-10 19:52:32 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 12169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 19239)
+Completed 200 OK in 57ms (Views: 33.6ms | ActiveRecord: 9.0ms | Allocations: 24874)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:52:42 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 3645)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 7581)
+Completed 200 OK in 53ms (Views: 41.0ms | ActiveRecord: 6.9ms | Allocations: 8212)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:52:50 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 3.2ms | Allocations: 7722)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:54:14 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Sent data  (2.2ms)
+Completed 200 OK in 32ms (Views: 1.9ms | ActiveRecord: 8.2ms | Allocations: 9488)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:54:37 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 26ms (Views: 1.0ms | ActiveRecord: 8.1ms | Allocations: 8985)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:54:41 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 2.3ms | Allocations: 1663)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:55:02 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 8.7ms | Allocations: 8775)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:55:06 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4293)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 8340)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 2.4ms | Allocations: 9078)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:55:07 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 3619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 7525)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 2.4ms | Allocations: 8139)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:55:17 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (3.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 1569)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:55:32 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 9357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 13255)
+Completed 200 OK in 37ms (Views: 22.8ms | ActiveRecord: 8.3ms | Allocations: 16067)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:55:34 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7553)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 2.3ms | Allocations: 8168)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:55:39 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 1598)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:55:43 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 3620)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 7555)
+Completed 200 OK in 52ms (Views: 40.8ms | ActiveRecord: 7.4ms | Allocations: 8169)
+
+
+Started GET "/employees" for ::1 at 2021-03-10 19:55:54 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 9338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 13207)
+Completed 200 OK in 36ms (Views: 22.3ms | ActiveRecord: 8.4ms | Allocations: 16019)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-10 19:56:01 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (4.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.3ms | Allocations: 2170)
+
+
+  
+ActionView::MissingTemplate (Missing template employees/index, application/index with {:locale=>[:en], :formats=>[:csv], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.1.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.1.3/app/views"
+):
+  
+app/controllers/employees_controller.rb:21:in `block (2 levels) in index'
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.csv" for ::1 at 2021-03-11 10:17:04 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 30)
+Sent data  (2.1ms)
+Completed 200 OK in 44ms (Views: 1.9ms | ActiveRecord: 7.2ms | Allocations: 11899)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 10:19:54 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 11625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 18689)
+Completed 200 OK in 50ms (Views: 35.0ms | ActiveRecord: 8.2ms | Allocations: 22318)
+
+
+Started GET "/?order=DESC&page=2" for ::1 at 2021-03-11 10:20:03 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"DESC", "page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7825)
+Completed 200 OK in 30ms (Views: 12.8ms | ActiveRecord: 2.5ms | Allocations: 8438)
+
+
+Started GET "/?order=ASC&page=3" for ::1 at 2021-03-11 10:20:06 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 20]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 3886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 7794)
+Completed 200 OK in 52ms (Views: 38.8ms | ActiveRecord: 6.0ms | Allocations: 8419)
+
+
+Started GET "/?order=DESC&page=4" for ::1 at 2021-03-11 10:20:10 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"DESC", "page"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 30]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  Rendered employees/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 2177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 6112)
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 4.5ms | Allocations: 6722)
+
+
+Started GET "/?order=ASC&page=3" for ::1 at 2021-03-11 10:20:20 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (9.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 20]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 3886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 7794)
+Completed 200 OK in 58ms (Views: 39.8ms | ActiveRecord: 12.4ms | Allocations: 8440)
+
+
+Started GET "/?order=DESC&page=2" for ::1 at 2021-03-11 10:20:23 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"DESC", "page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 3877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 7783)
+Completed 200 OK in 39ms (Views: 30.9ms | ActiveRecord: 5.0ms | Allocations: 8393)
+
+
+Started GET "/?order=ASC&page=1" for ::1 at 2021-03-11 10:20:25 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 3779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 7699)
+Completed 200 OK in 29ms (Views: 20.2ms | ActiveRecord: 4.4ms | Allocations: 8312)
+
+
+Started GET "/?order=ASC&page=1" for ::1 at 2021-03-11 10:21:52 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 7066)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 7132)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 8452)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1><%= link_to:"Employees", employees_path(@employees)%></h1>
+
+<%= form_tag employees_path, method: :get do %>
+<%= text_field_tag :search%>
+
+<%= submit_tag "Find", name: nil %>
+<% end %>
+
+<br/>
+<%= form_tag import_employees_path,multipart: true do %>
+  <%= label_tag :file, "Import csv here" %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br><br>
+
+<%= form_with url:delete_selected_employees_path do |form| %>
+<%= label_tag :list_employees, "List" %>
+<%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+<%= form.submit value: "Delete Selected" %>
+<br><br>
+<table align="justify">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>S.No.</th>
+      <% if params[:order] == "DESC" %>
+        <% params[:order] = "ASC" %>
+      <% else %>
+        <% params[:order] = "DESC" %>
+      <% end %>
+      <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+      <th>Edit</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee, index| %>  
+      <tr>
+        <td>
+          <%= check_box_tag "employee_ids[]",employee.id %>
+        </td>
+        <td>
+          <%= index+=1 %>
+        </td>
+        <td>
+          <%= link_to employee.name.capitalize,employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Edit",edit_employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Show",employee_path(employee) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<br/>
+<h3>
+  <%= link_to "Add New Employee", new_employee_path %>
+</h3>
+<% end %>
+
+<%= will_paginate @employees %>
+):
+1:    <h1><%= link_to:"Employees", employees_path(@employees)%></h1>
+2:    
+3:    <%= form_tag employees_path, method: :get do %>
+4:    <%= text_field_tag :search%>
+5:    
+6:    <%= submit_tag "Find", name: nil %>
+7:    <% end %>
+8:    
+9:    <br/>
+10:    <%= form_tag import_employees_path,multipart: true do %>
+11:      <%= label_tag :file, "Import csv here" %>
+12:      <%= file_field_tag :file %>
+13:      <%= submit_tag "Import" %>
+14:    <% end %>
+15:    <br><br>
+16:    
+17:    <%= form_with url:delete_selected_employees_path do |form| %>
+18:    <%= label_tag :list_employees, "List" %>
+19:    <%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+20:    <%= form.submit value: "Delete Selected" %>
+21:    <br><br>
+22:    <table align="justify">
+23:      <thead>
+24:        <tr>
+25:          <th>Select</th>
+26:          <th>S.No.</th>
+27:          <% if params[:order] == "DESC" %>
+28:            <% params[:order] = "ASC" %>
+29:          <% else %>
+30:            <% params[:order] = "DESC" %>
+31:          <% end %>
+32:          <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+33:          <th>Edit</th>
+34:          <th>Show</th>
+35:        </tr>
+36:      </thead>
+37:      <tbody>
+38:        <% @employees.each_with_index do |employee, index| %>  
+39:          <tr>
+40:            <td>
+41:              <%= check_box_tag "employee_ids[]",employee.id %>
+42:            </td>
+43:            <td>
+44:              <%= index+=1 %>
+45:            </td>
+46:            <td>
+47:              <%= link_to employee.name.capitalize,employee_path(employee) %>
+48:            </td>
+49:            <td>
+50:              <%= link_to "Edit",edit_employee_path(employee) %>
+51:            </td>
+52:            <td>
+53:              <%= link_to "Show",employee_path(employee) %>
+54:            </td>
+55:          </tr>
+56:        <% end %>
+57:      </tbody>
+58:      
+59:    </table>
+60:    <br/>
+61:    <h3>
+62:      <%= link_to "Add New Employee", new_employee_path %>
+63:    </h3>
+64:    <% end %>
+65:    
+66:    <%= will_paginate @employees %>
+  
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+Started GET "/?order=ASC&page=1" for ::1 at 2021-03-11 10:22:04 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1555)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1620)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3073)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1><%= link_to:"Employees", employees_path%></h1>
+
+<%= form_tag employees_path, method: :get do %>
+<%= text_field_tag :search%>
+
+<%= submit_tag "Find", name: nil %>
+<% end %>
+
+<br/>
+<%= form_tag import_employees_path,multipart: true do %>
+  <%= label_tag :file, "Import csv here" %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br><br>
+
+<%= form_with url:delete_selected_employees_path do |form| %>
+<%= label_tag :list_employees, "List" %>
+<%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+<%= form.submit value: "Delete Selected" %>
+<br><br>
+<table align="justify">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>S.No.</th>
+      <% if params[:order] == "DESC" %>
+        <% params[:order] = "ASC" %>
+      <% else %>
+        <% params[:order] = "DESC" %>
+      <% end %>
+      <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+      <th>Edit</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee, index| %>  
+      <tr>
+        <td>
+          <%= check_box_tag "employee_ids[]",employee.id %>
+        </td>
+        <td>
+          <%= index+=1 %>
+        </td>
+        <td>
+          <%= link_to employee.name.capitalize,employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Edit",edit_employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Show",employee_path(employee) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<br/>
+<h3>
+  <%= link_to "Add New Employee", new_employee_path %>
+</h3>
+<% end %>
+
+<%= will_paginate @employees %>
+):
+1:    <h1><%= link_to:"Employees", employees_path%></h1>
+2:    
+3:    <%= form_tag employees_path, method: :get do %>
+4:    <%= text_field_tag :search%>
+5:    
+6:    <%= submit_tag "Find", name: nil %>
+7:    <% end %>
+8:    
+9:    <br/>
+10:    <%= form_tag import_employees_path,multipart: true do %>
+11:      <%= label_tag :file, "Import csv here" %>
+12:      <%= file_field_tag :file %>
+13:      <%= submit_tag "Import" %>
+14:    <% end %>
+15:    <br><br>
+16:    
+17:    <%= form_with url:delete_selected_employees_path do |form| %>
+18:    <%= label_tag :list_employees, "List" %>
+19:    <%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+20:    <%= form.submit value: "Delete Selected" %>
+21:    <br><br>
+22:    <table align="justify">
+23:      <thead>
+24:        <tr>
+25:          <th>Select</th>
+26:          <th>S.No.</th>
+27:          <% if params[:order] == "DESC" %>
+28:            <% params[:order] = "ASC" %>
+29:          <% else %>
+30:            <% params[:order] = "DESC" %>
+31:          <% end %>
+32:          <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+33:          <th>Edit</th>
+34:          <th>Show</th>
+35:        </tr>
+36:      </thead>
+37:      <tbody>
+38:        <% @employees.each_with_index do |employee, index| %>  
+39:          <tr>
+40:            <td>
+41:              <%= check_box_tag "employee_ids[]",employee.id %>
+42:            </td>
+43:            <td>
+44:              <%= index+=1 %>
+45:            </td>
+46:            <td>
+47:              <%= link_to employee.name.capitalize,employee_path(employee) %>
+48:            </td>
+49:            <td>
+50:              <%= link_to "Edit",edit_employee_path(employee) %>
+51:            </td>
+52:            <td>
+53:              <%= link_to "Show",employee_path(employee) %>
+54:            </td>
+55:          </tr>
+56:        <% end %>
+57:      </tbody>
+58:      
+59:    </table>
+60:    <br/>
+61:    <h3>
+62:      <%= link_to "Add New Employee", new_employee_path %>
+63:    </h3>
+64:    <% end %>
+65:    
+66:    <%= will_paginate @employees %>
+  
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+Started GET "/?order=DESC&page=2" for ::1 at 2021-03-11 10:22:06 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"DESC", "page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1609)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2195)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1><%= link_to:"Employees", employees_path%></h1>
+
+<%= form_tag employees_path, method: :get do %>
+<%= text_field_tag :search%>
+
+<%= submit_tag "Find", name: nil %>
+<% end %>
+
+<br/>
+<%= form_tag import_employees_path,multipart: true do %>
+  <%= label_tag :file, "Import csv here" %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br><br>
+
+<%= form_with url:delete_selected_employees_path do |form| %>
+<%= label_tag :list_employees, "List" %>
+<%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+<%= form.submit value: "Delete Selected" %>
+<br><br>
+<table align="justify">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>S.No.</th>
+      <% if params[:order] == "DESC" %>
+        <% params[:order] = "ASC" %>
+      <% else %>
+        <% params[:order] = "DESC" %>
+      <% end %>
+      <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+      <th>Edit</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee, index| %>  
+      <tr>
+        <td>
+          <%= check_box_tag "employee_ids[]",employee.id %>
+        </td>
+        <td>
+          <%= index+=1 %>
+        </td>
+        <td>
+          <%= link_to employee.name.capitalize,employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Edit",edit_employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Show",employee_path(employee) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<br/>
+<h3>
+  <%= link_to "Add New Employee", new_employee_path %>
+</h3>
+<% end %>
+
+<%= will_paginate @employees %>
+):
+1:    <h1><%= link_to:"Employees", employees_path%></h1>
+2:    
+3:    <%= form_tag employees_path, method: :get do %>
+4:    <%= text_field_tag :search%>
+5:    
+6:    <%= submit_tag "Find", name: nil %>
+7:    <% end %>
+8:    
+9:    <br/>
+10:    <%= form_tag import_employees_path,multipart: true do %>
+11:      <%= label_tag :file, "Import csv here" %>
+12:      <%= file_field_tag :file %>
+13:      <%= submit_tag "Import" %>
+14:    <% end %>
+15:    <br><br>
+16:    
+17:    <%= form_with url:delete_selected_employees_path do |form| %>
+18:    <%= label_tag :list_employees, "List" %>
+19:    <%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+20:    <%= form.submit value: "Delete Selected" %>
+21:    <br><br>
+22:    <table align="justify">
+23:      <thead>
+24:        <tr>
+25:          <th>Select</th>
+26:          <th>S.No.</th>
+27:          <% if params[:order] == "DESC" %>
+28:            <% params[:order] = "ASC" %>
+29:          <% else %>
+30:            <% params[:order] = "DESC" %>
+31:          <% end %>
+32:          <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+33:          <th>Edit</th>
+34:          <th>Show</th>
+35:        </tr>
+36:      </thead>
+37:      <tbody>
+38:        <% @employees.each_with_index do |employee, index| %>  
+39:          <tr>
+40:            <td>
+41:              <%= check_box_tag "employee_ids[]",employee.id %>
+42:            </td>
+43:            <td>
+44:              <%= index+=1 %>
+45:            </td>
+46:            <td>
+47:              <%= link_to employee.name.capitalize,employee_path(employee) %>
+48:            </td>
+49:            <td>
+50:              <%= link_to "Edit",edit_employee_path(employee) %>
+51:            </td>
+52:            <td>
+53:              <%= link_to "Show",employee_path(employee) %>
+54:            </td>
+55:          </tr>
+56:        <% end %>
+57:      </tbody>
+58:      
+59:    </table>
+60:    <br/>
+61:    <h3>
+62:      <%= link_to "Add New Employee", new_employee_path %>
+63:    </h3>
+64:    <% end %>
+65:    
+66:    <%= will_paginate @employees %>
+  
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+Started GET "/?order=ASC&page=3" for ::1 at 2021-03-11 10:22:08 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1609)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2195)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1><%= link_to:"Employees", employees_path%></h1>
+
+<%= form_tag employees_path, method: :get do %>
+<%= text_field_tag :search%>
+
+<%= submit_tag "Find", name: nil %>
+<% end %>
+
+<br/>
+<%= form_tag import_employees_path,multipart: true do %>
+  <%= label_tag :file, "Import csv here" %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br><br>
+
+<%= form_with url:delete_selected_employees_path do |form| %>
+<%= label_tag :list_employees, "List" %>
+<%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+<%= form.submit value: "Delete Selected" %>
+<br><br>
+<table align="justify">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>S.No.</th>
+      <% if params[:order] == "DESC" %>
+        <% params[:order] = "ASC" %>
+      <% else %>
+        <% params[:order] = "DESC" %>
+      <% end %>
+      <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+      <th>Edit</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee, index| %>  
+      <tr>
+        <td>
+          <%= check_box_tag "employee_ids[]",employee.id %>
+        </td>
+        <td>
+          <%= index+=1 %>
+        </td>
+        <td>
+          <%= link_to employee.name.capitalize,employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Edit",edit_employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Show",employee_path(employee) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<br/>
+<h3>
+  <%= link_to "Add New Employee", new_employee_path %>
+</h3>
+<% end %>
+
+<%= will_paginate @employees %>
+):
+1:    <h1><%= link_to:"Employees", employees_path%></h1>
+2:    
+3:    <%= form_tag employees_path, method: :get do %>
+4:    <%= text_field_tag :search%>
+5:    
+6:    <%= submit_tag "Find", name: nil %>
+7:    <% end %>
+8:    
+9:    <br/>
+10:    <%= form_tag import_employees_path,multipart: true do %>
+11:      <%= label_tag :file, "Import csv here" %>
+12:      <%= file_field_tag :file %>
+13:      <%= submit_tag "Import" %>
+14:    <% end %>
+15:    <br><br>
+16:    
+17:    <%= form_with url:delete_selected_employees_path do |form| %>
+18:    <%= label_tag :list_employees, "List" %>
+19:    <%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+20:    <%= form.submit value: "Delete Selected" %>
+21:    <br><br>
+22:    <table align="justify">
+23:      <thead>
+24:        <tr>
+25:          <th>Select</th>
+26:          <th>S.No.</th>
+27:          <% if params[:order] == "DESC" %>
+28:            <% params[:order] = "ASC" %>
+29:          <% else %>
+30:            <% params[:order] = "DESC" %>
+31:          <% end %>
+32:          <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+33:          <th>Edit</th>
+34:          <th>Show</th>
+35:        </tr>
+36:      </thead>
+37:      <tbody>
+38:        <% @employees.each_with_index do |employee, index| %>  
+39:          <tr>
+40:            <td>
+41:              <%= check_box_tag "employee_ids[]",employee.id %>
+42:            </td>
+43:            <td>
+44:              <%= index+=1 %>
+45:            </td>
+46:            <td>
+47:              <%= link_to employee.name.capitalize,employee_path(employee) %>
+48:            </td>
+49:            <td>
+50:              <%= link_to "Edit",edit_employee_path(employee) %>
+51:            </td>
+52:            <td>
+53:              <%= link_to "Show",employee_path(employee) %>
+54:            </td>
+55:          </tr>
+56:        <% end %>
+57:      </tbody>
+58:      
+59:    </table>
+60:    <br/>
+61:    <h3>
+62:      <%= link_to "Add New Employee", new_employee_path %>
+63:    </h3>
+64:    <% end %>
+65:    
+66:    <%= will_paginate @employees %>
+  
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+Started GET "/?order=ASC&page=3" for ::1 at 2021-03-11 10:22:08 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2546)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 10.7ms | Allocations: 22731)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1><%= link_to:"Employees", employees_path%></h1>
+
+<%= form_tag employees_path, method: :get do %>
+<%= text_field_tag :search%>
+
+<%= submit_tag "Find", name: nil %>
+<% end %>
+
+<br/>
+<%= form_tag import_employees_path,multipart: true do %>
+  <%= label_tag :file, "Import csv here" %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<br><br>
+
+<%= form_with url:delete_selected_employees_path do |form| %>
+<%= label_tag :list_employees, "List" %>
+<%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+<%= form.submit value: "Delete Selected" %>
+<br><br>
+<table align="justify">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>S.No.</th>
+      <% if params[:order] == "DESC" %>
+        <% params[:order] = "ASC" %>
+      <% else %>
+        <% params[:order] = "DESC" %>
+      <% end %>
+      <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+      <th>Edit</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each_with_index do |employee, index| %>  
+      <tr>
+        <td>
+          <%= check_box_tag "employee_ids[]",employee.id %>
+        </td>
+        <td>
+          <%= index+=1 %>
+        </td>
+        <td>
+          <%= link_to employee.name.capitalize,employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Edit",edit_employee_path(employee) %>
+        </td>
+        <td>
+          <%= link_to "Show",employee_path(employee) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<br/>
+<h3>
+  <%= link_to "Add New Employee", new_employee_path %>
+</h3>
+<% end %>
+
+<%= will_paginate @employees %>
+):
+1:    <h1><%= link_to:"Employees", employees_path%></h1>
+2:    
+3:    <%= form_tag employees_path, method: :get do %>
+4:    <%= text_field_tag :search%>
+5:    
+6:    <%= submit_tag "Find", name: nil %>
+7:    <% end %>
+8:    
+9:    <br/>
+10:    <%= form_tag import_employees_path,multipart: true do %>
+11:      <%= label_tag :file, "Import csv here" %>
+12:      <%= file_field_tag :file %>
+13:      <%= submit_tag "Import" %>
+14:    <% end %>
+15:    <br><br>
+16:    
+17:    <%= form_with url:delete_selected_employees_path do |form| %>
+18:    <%= label_tag :list_employees, "List" %>
+19:    <%= select_tag :list_employees, options_for_select(@employees.map { |employee| [employee.name]  }) %>
+20:    <%= form.submit value: "Delete Selected" %>
+21:    <br><br>
+22:    <table align="justify">
+23:      <thead>
+24:        <tr>
+25:          <th>Select</th>
+26:          <th>S.No.</th>
+27:          <% if params[:order] == "DESC" %>
+28:            <% params[:order] = "ASC" %>
+29:          <% else %>
+30:            <% params[:order] = "DESC" %>
+31:          <% end %>
+32:          <th> <%= link_to 'Name', employees_path(order: params[:order]) %> </th>
+33:          <th>Edit</th>
+34:          <th>Show</th>
+35:        </tr>
+36:      </thead>
+37:      <tbody>
+38:        <% @employees.each_with_index do |employee, index| %>  
+39:          <tr>
+40:            <td>
+41:              <%= check_box_tag "employee_ids[]",employee.id %>
+42:            </td>
+43:            <td>
+44:              <%= index+=1 %>
+45:            </td>
+46:            <td>
+47:              <%= link_to employee.name.capitalize,employee_path(employee) %>
+48:            </td>
+49:            <td>
+50:              <%= link_to "Edit",edit_employee_path(employee) %>
+51:            </td>
+52:            <td>
+53:              <%= link_to "Show",employee_path(employee) %>
+54:            </td>
+55:          </tr>
+56:        <% end %>
+57:      </tbody>
+58:      
+59:    </table>
+60:    <br/>
+61:    <h3>
+62:      <%= link_to "Add New Employee", new_employee_path %>
+63:    </h3>
+64:    <% end %>
+65:    
+66:    <%= will_paginate @employees %>
+  
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/employees/index.html.erb:1: syntax error, unexpected tLABEL
+app/views/employees/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+Started GET "/?order=ASC&page=3" for ::1 at 2021-03-11 10:22:27 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 20]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 4829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 9059)
+Completed 200 OK in 56ms (Views: 42.3ms | ActiveRecord: 7.6ms | Allocations: 10388)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 10:22:31 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 7723)
+Completed 200 OK in 35ms (Views: 23.4ms | ActiveRecord: 6.4ms | Allocations: 8341)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 10:22:33 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7710)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 2.8ms | Allocations: 8327)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 10:29:13 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 8760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 12629)
+Completed 200 OK in 51ms (Views: 24.8ms | ActiveRecord: 11.6ms | Allocations: 18626)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:29:26 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (3.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.4ms | Allocations: 25)
+Sent data  (1.8ms)
+Completed 200 OK in 18ms (Views: 1.4ms | ActiveRecord: 3.6ms | Allocations: 2201)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:31:27 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data  (1.0ms)
+Completed 200 OK in 30ms (Views: 0.9ms | ActiveRecord: 11.8ms | Allocations: 9796)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 10:32:16 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 9504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 13401)
+Completed 200 OK in 38ms (Views: 23.2ms | ActiveRecord: 9.0ms | Allocations: 16351)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:32:22 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (4.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 25)
+Sent data  (1.5ms)
+Completed 200 OK in 23ms (Views: 1.1ms | ActiveRecord: 4.3ms | Allocations: 2186)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:44:29 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (4.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 25)
+Sent data  (2.4ms)
+Completed 200 OK in 67ms (Views: 2.0ms | ActiveRecord: 31.0ms | Allocations: 5333)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:46:33 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 21.5ms | Allocations: 7368)
+Completed 200 OK in 30ms (Views: 13.0ms | ActiveRecord: 10.3ms | Allocations: 11198)
+
+
+Started GET "/" for ::1 at 2021-03-11 10:47:08 +0530
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 12370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 19440)
+Completed 200 OK in 57ms (Views: 33.7ms | ActiveRecord: 9.1ms | Allocations: 25086)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:47:16 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (3.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 12.8ms | Allocations: 1990)
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 3.5ms | Allocations: 3565)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:49:11 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (3.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 11.9ms | Allocations: 1672)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 3.6ms | Allocations: 2342)
+
+
+Started GET "/" for ::1 at 2021-03-11 10:55:10 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 32.8ms | Allocations: 4525)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 8634)
+Completed 200 OK in 115ms (Views: 48.0ms | ActiveRecord: 36.7ms | Allocations: 12923)
+
+
+Started GET "/" for ::1 at 2021-03-11 10:55:17 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 3818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 7725)
+Completed 200 OK in 51ms (Views: 40.0ms | ActiveRecord: 6.4ms | Allocations: 8345)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:55:26 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (5.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 16.9ms | Allocations: 1959)
+Completed 200 OK in 30ms (Views: 18.4ms | ActiveRecord: 5.9ms | Allocations: 3521)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 10:56:00 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (3.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 14.6ms | Allocations: 1955)
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 3.1ms | Allocations: 3703)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:08:52 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 4528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 8637)
+Completed 200 OK in 64ms (Views: 19.2ms | ActiveRecord: 17.7ms | Allocations: 12929)
+
+
+Started GET "/employees.xl" for ::1 at 2021-03-11 11:09:00 +0530
+Processing by EmployeesController#index as */*
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.0ms | Allocations: 788)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/employees_controller.rb:19:in `index'
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:09:03 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (4.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 19.0ms | Allocations: 2057)
+Completed 200 OK in 34ms (Views: 20.7ms | ActiveRecord: 4.8ms | Allocations: 3776)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:10:06 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (6.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 13.4ms | Allocations: 1959)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 6.1ms | Allocations: 3727)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:10:53 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 12.8ms | Allocations: 1957)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 3.2ms | Allocations: 3705)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:15:16 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 5.8ms | Allocations: 1967)
+Completed 200 OK in 33ms (Views: 11.2ms | ActiveRecord: 1.3ms | Allocations: 3730)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:17:07 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 5.9ms | Allocations: 1957)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 1.5ms | Allocations: 3705)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:17:36 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (5.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 16.2ms | Allocations: 1955)
+Completed 200 OK in 34ms (Views: 21.0ms | ActiveRecord: 5.1ms | Allocations: 3703)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:19:00 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (5.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 15.6ms | Allocations: 1992)
+Completed 200 OK in 35ms (Views: 21.7ms | ActiveRecord: 5.9ms | Allocations: 3740)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:19:15 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4524)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 8746)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 2.5ms | Allocations: 9896)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:19:17 +0530
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7755)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 2.9ms | Allocations: 8377)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:19:23 +0530
+Processing by EmployeesController#index as XLS
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 11.4ms | Allocations: 1682)
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 3.2ms | Allocations: 2338)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:21:29 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 8252)
+Completed 200 OK in 58ms (Views: 23.8ms | ActiveRecord: 15.3ms | Allocations: 17427)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:23:25 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4406)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8485)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 3.3ms | Allocations: 10520)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:23:33 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (3.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 15.8ms | Allocations: 2004)
+Completed 200 OK in 38ms (Views: 17.8ms | ActiveRecord: 5.9ms | Allocations: 4271)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:28:52 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 4401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 8480)
+Completed 200 OK in 37ms (Views: 28.4ms | ActiveRecord: 5.0ms | Allocations: 10507)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:28:59 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 4.9ms | Allocations: 1993)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 2.5ms | Allocations: 4263)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:30:11 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 4.2ms | Allocations: 1992)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 2.4ms | Allocations: 4435)
+
+
+Started GET "/employees/50" for ::1 at 2021-03-11 11:30:26 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4431)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 1.3ms | Allocations: 10555)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:31:17 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 6.8ms | Allocations: 1992)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 2.7ms | Allocations: 4436)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:31:52 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 4403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 8482)
+Completed 200 OK in 27ms (Views: 17.9ms | ActiveRecord: 4.9ms | Allocations: 10516)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:31:54 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (3.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7752)
+Completed 200 OK in 23ms (Views: 12.7ms | ActiveRecord: 6.3ms | Allocations: 9072)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:31:56 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 3804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 7710)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 5.6ms | Allocations: 9028)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:32:00 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 7738)
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 4.5ms | Allocations: 9052)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:32:03 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 7.5ms | Allocations: 1995)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 3.8ms | Allocations: 4261)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:32:36 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 8481)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 3.4ms | Allocations: 10513)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:32:40 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 5.2ms | Allocations: 1992)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 2.6ms | Allocations: 4250)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:33:11 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (2.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (4.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:19:in `map'
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:66
+  Rendered employees/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 4403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 8510)
+Completed 200 OK in 48ms (Views: 29.5ms | ActiveRecord: 9.8ms | Allocations: 10544)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:33:13 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 5.4ms | Allocations: 1990)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 2.5ms | Allocations: 4257)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:40:02 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:20:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:67
+  Rendered employees/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 8623)
+Completed 200 OK in 70ms (Views: 15.4ms | ActiveRecord: 26.2ms | Allocations: 13969)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:40:24 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 8597)
+Completed 200 OK in 36ms (Views: 24.5ms | ActiveRecord: 4.5ms | Allocations: 10628)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:40:36 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 4519)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 8630)
+Completed 200 OK in 31ms (Views: 21.1ms | ActiveRecord: 5.4ms | Allocations: 10664)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:40:43 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 9.4ms | Allocations: 1991)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 2.6ms | Allocations: 4259)
+
+
+Started GET "/employees.csv" for ::1 at 2021-03-11 11:40:58 +0530
+Processing by EmployeesController#index as CSV
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/models/employee.rb:62:in `block in to_csv'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Sent data  (15.9ms)
+Completed 200 OK in 30ms (Views: 15.7ms | ActiveRecord: 3.5ms | Allocations: 7855)
+
+
+Started GET "/employees" for ::1 at 2021-03-11 11:43:56 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 8596)
+Completed 200 OK in 36ms (Views: 26.6ms | ActiveRecord: 3.1ms | Allocations: 10628)
+
+
+Started GET "/?order=DESC&page=2" for ::1 at 2021-03-11 11:45:36 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"DESC", "page"=>"2"}
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7901)
+Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 4.7ms | Allocations: 9214)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:45:39 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (2.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 6.4ms | Allocations: 1992)
+Completed 200 OK in 20ms (Views: 7.9ms | ActiveRecord: 4.5ms | Allocations: 4258)
+
+
+Started GET "/?order=ASC&page=3" for ::1 at 2021-03-11 11:45:57 +0530
+Processing by EmployeesController#index as HTML
+  Parameters: {"order"=>"ASC", "page"=>"3"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY name ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 20]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 3984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 7891)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 3.5ms | Allocations: 9203)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:49:11 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 8328)
+Completed 200 OK in 43ms (Views: 14.6ms | ActiveRecord: 11.9ms | Allocations: 17154)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:49:12 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3880)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7786)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 3.3ms | Allocations: 9101)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:49:15 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (2.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 8.3ms | Allocations: 1694)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 4.3ms | Allocations: 3045)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:50:20 +0530
+  
+SyntaxError (/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/controllers/employees_controller.rb:22: syntax error, unexpected local variable or method, expecting '}'
+...v { send_data @employees to_csv }
+...                         ^~~~~~
+/home/gr00t/Desktop/ruby_on_rails/company_xyz/app/controllers/employees_controller.rb:94: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/employees_controller.rb:22: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/employees_controller.rb:94: syntax error, unexpected `end', expecting end-of-input
+app/controllers/employees_controller.rb:22: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/employees_controller.rb:94: syntax error, unexpected `end', expecting end-of-input
+app/controllers/employees_controller.rb:22: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/employees_controller.rb:94: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for ::1 at 2021-03-11 11:50:46 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5048)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 9117)
+Completed 200 OK in 46ms (Views: 17.1ms | ActiveRecord: 10.3ms | Allocations: 18251)
+
+
+Started GET "/employees.xls" for ::1 at 2021-03-11 11:50:50 +0530
+Processing by EmployeesController#index as XLS
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering employees/index.xls.erb
+  [1m[36mEmployee Load (4.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.xls.erb:22
+  Rendered employees/index.xls.erb (Duration: 10.3ms | Allocations: 2039)
+Completed 200 OK in 22ms (Views: 11.5ms | ActiveRecord: 5.6ms | Allocations: 4306)
+
+
+Started POST "/employees/import" for ::1 at 2021-03-11 11:58:45 +0530
+Processing by EmployeesController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fce8c335600 @tempfile=#<Tempfile:/tmp/RackMultipart20210311-76410-hw82fr.ods>, @original_filename="employees.ods", @content_type="application/vnd.oasis.opendocument.spreadsheet", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"employees.ods\"\r\nContent-Type: application/vnd.oasis.opendocument.spreadsheet\r\n">, "commit"=>"Import"}
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."emp_id" = $1 LIMIT $2[0m  [["emp_id", "BS227"], ["LIMIT", 1]]
+  ↳ app/models/employee.rb:34:in `block in import'
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."emp_id" = $1 LIMIT $2[0m  [["emp_id", "BS228"], ["LIMIT", 1]]
+  ↳ app/models/employee.rb:34:in `block in import'
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 11.7ms | Allocations: 15412)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:58:46 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 8363)
+Completed 200 OK in 22ms (Views: 14.5ms | ActiveRecord: 3.7ms | Allocations: 9821)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:59:24 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 4429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 8326)
+Completed 200 OK in 50ms (Views: 19.9ms | ActiveRecord: 11.6ms | Allocations: 17147)
+
+
+Started POST "/employees/import" for ::1 at 2021-03-11 11:59:29 +0530
+Processing by EmployeesController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fce84882408 @tempfile=#<Tempfile:/tmp/RackMultipart20210311-76410-1r9z23n.ods>, @original_filename="employees.ods", @content_type="application/vnd.oasis.opendocument.spreadsheet", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"employees.ods\"\r\nContent-Type: application/vnd.oasis.opendocument.spreadsheet\r\n">, "commit"=>"Import"}
+  [1m[36mEmployee Load (4.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."emp_id" = $1 LIMIT $2[0m  [["emp_id", "BS227"], ["LIMIT", 1]]
+  ↳ app/models/employee.rb:34:in `block in import'
+  [1m[36mEmployee Load (3.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."emp_id" = $1 LIMIT $2[0m  [["emp_id", "BS228"], ["LIMIT", 1]]
+  ↳ app/models/employee.rb:34:in `block in import'
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 7.7ms | Allocations: 5599)
+
+
+Started GET "/" for ::1 at 2021-03-11 11:59:29 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (4.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 3881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 7787)
+Completed 200 OK in 36ms (Views: 17.7ms | ActiveRecord: 8.2ms | Allocations: 9102)
+
+
+Started GET "/" for ::1 at 2021-03-11 12:00:39 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8326)
+Completed 200 OK in 40ms (Views: 13.7ms | ActiveRecord: 9.9ms | Allocations: 17021)
+
+
+Started POST "/employees/import" for ::1 at 2021-03-11 12:00:46 +0530
+Processing by EmployeesController#import as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fce8c347c88 @tempfile=#<Tempfile:/tmp/RackMultipart20210311-76410-1lpj2vt.ods>, @original_filename="employees.ods", @content_type="application/vnd.oasis.opendocument.spreadsheet", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"employees.ods\"\r\nContent-Type: application/vnd.oasis.opendocument.spreadsheet\r\n">, "commit"=>"Import"}
+  [1m[36mEmployee Load (1.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."emp_id" = $1 LIMIT $2[0m  [["emp_id", "BS227"], ["LIMIT", 1]]
+  ↳ app/models/employee.rb:34:in `block in import'
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."emp_id" = $1 LIMIT $2[0m  [["emp_id", "BS228"], ["LIMIT", 1]]
+  ↳ app/models/employee.rb:34:in `block in import'
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms | Allocations: 5577)
+
+
+Started GET "/" for ::1 at 2021-03-11 12:00:46 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY updated_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:21:in `map'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:68
+  Rendered employees/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3880)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7786)
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 3.3ms | Allocations: 9100)
+
+

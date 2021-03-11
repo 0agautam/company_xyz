@@ -4,19 +4,24 @@ class EmployeesController < ApplicationController
     
     order = params[:order]
     order = "ASC" unless order
-      
+    page = 10
+    puts "First employee id is : #{Employee.first.id.class}"
     if params[:order]
-  	  @employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("name #{order}")
+  	  @employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:page).order("name #{order}")
   
     elsif params[:order] and params[:page]
-      @employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:5).order("updated_at DESC")
+      @employees = Employee.search(params[:search]).paginate(page: params[:page], per_page:page).order("updated_at DESC")
     
     else
-      @employees = Employee.all.paginate(page: params[:page],per_page:5).order("updated_at DESC")
-      
+      @employees = Employee.all.paginate(page: params[:page],per_page:page).order("updated_at DESC")
+
     end
 
-    
+    respond_to do |format|
+      format.html
+      format.csv { send_data @employees.to_csv }
+      format.xls #{ send_data @employees.to_csv(col_sep: "\t") }
+    end
 
   end
 
