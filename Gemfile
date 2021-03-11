@@ -70,3 +70,6 @@ gem 'roo'
 #for excel files
 gem 'roo-xls'
 gem "iconv"
+
+#mailer
+gem 'mail'

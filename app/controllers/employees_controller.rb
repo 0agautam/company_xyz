@@ -37,16 +37,25 @@ class EmployeesController < ApplicationController
   end
 
   def create
-  	puts "Data:#{params}"
   	@employee = Employee.new(employee_params)
 
-  	if @employee.save
-  		puts "Successfully saved!"
-  		redirect_to @employee
-  	else
-  		puts "Failed!!! not saved"
-  		render :new
-  	end
+    respond_to do |format|
+      if @employee.save
+        # Tell the UserMailer to send a welcome email after save
+        # EmployeeMailer.with(employee: @employee).registration_confirmation.deliver_now
+        EmployeeMailer.registration_confirmation(@employee).deliver
+        
+        puts "Successfully saved!"
+
+        format.html { redirect_to(@employee, notice: 'User was successfully created.') }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        puts "Failed!!! not saved"
+
+        format.html { render action: 'new' }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end 		
   end
 
   def edit
@@ -87,7 +96,7 @@ class EmployeesController < ApplicationController
 
   private
     def employee_params
-  	  params.require(:employee).permit(:name, :gender, :dob, :address, :department, :doj,:emp_id,:image)
+  	  params.require(:employee).permit(:name, :gender, :dob, :address, :department, :doj,:emp_id, :email)
   	end
 
 

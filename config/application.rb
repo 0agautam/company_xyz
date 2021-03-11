@@ -4,6 +4,7 @@ require "rails/all"
 require 'csv'
 require 'roo-xls'
 require 'iconv'
+require 'mail'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

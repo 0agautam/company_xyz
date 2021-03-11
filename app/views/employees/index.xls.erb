@@ -18,6 +18,7 @@
         <Cell><Data ss:Type="String">DoJ</Data></Cell>
         <Cell><Data ss:Type="String">Emp_Id</Data></Cell>
         <Cell><Data ss:Type="String">Image</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
       </Row>
     <% @employees.all.each do |employee| %>
       <Row>
@@ -33,6 +34,8 @@
         <Cell><Data ss:Type="String"><%= employee.doj %></Data></Cell>
         <Cell><Data ss:Type="String"><%= employee.emp_id %></Data></Cell>
         <Cell><Data ss:Type="String"><%= employee.image %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= employee.email %></Data></Cell>
+
       </Row>
     <% end %>
     </Table>
